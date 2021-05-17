@@ -4,9 +4,9 @@
 
 [Github actions workflow](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths) descriptions
 
-| Workflow Action | On  | Description |
-| --------------- | --- | ----------- |
-|                 |     |
+| Workflow Action | On   | Description                    |
+| --------------- | ---- | ------------------------------ |
+| nodejsCI        | push | run frontend and backend tests |
 
 ### Branching strategies
 
