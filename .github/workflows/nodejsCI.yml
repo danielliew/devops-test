@@ -1,0 +1,56 @@
+name: nodejs CI
+on: push
+jobs:
+  test-backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        - working-directory: ./backend
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/npm.lock') }}
+
+      - name: Use Nodejs 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          npm ci
+
+      - name: Run Tests
+        run: npm run test
+
+  test-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        - working-directory: ./frontend
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/npm.lock') }}
+
+      - name: Use Nodejs 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          npm ci
+
+      - name: Run Tests
+        run: npm run test
