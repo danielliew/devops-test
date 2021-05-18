@@ -17,7 +17,7 @@ jobs:
         id: cache-nmb
         with:
           path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-backend-modules
 
       - name: Use Nodejs 12
         uses: actions/setup-node@v1
@@ -44,7 +44,7 @@ jobs:
         id: cache-nmf
         with:
           path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-frontend-modules
 
       - name: Use Nodejs 12
         uses: actions/setup-node@v1
