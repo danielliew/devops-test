@@ -1,5 +1,8 @@
 name: nodejs CI
-on: push
+on:
+  push:
+    branches:
+      - main
 jobs:
   test-backend:
     runs-on: ubuntu-latest
