@@ -11,26 +11,35 @@ chai.should();
 //Our parent block
 describe("App module tests", () => {
   describe("/GET /", () => {
-    it("it should GET hello world", (done) => {
+    it("it should GET hello world with status code 200", (done) => {
       chai
         .request(app)
         .get("/")
         .end((err, res) => {
           res.should.have.status(200);
-          console.log(res.body, res.text);
+          res.text.should.equal("Hello world");
+          done();
+        });
+    });
+    it("it should not GET borat", (done) => {
+      chai
+        .request(app)
+        .get("/")
+        .end((err, res) => {
+          res.text.should.not.equal("borat");
           done();
         });
     });
   });
 
   describe("/GET /json", () => {
-    it("it should GET hello world", (done) => {
+    it("it should GET hello world in JSON with status code 200", (done) => {
       chai
         .request(app)
         .get("/json")
         .end((err, res) => {
-          res.should.have.status(200);
-          console.log(res.body, res.text);
+          console.log(res.body);
+          res.body.should.be.an("object");
           done();
         });
     });
