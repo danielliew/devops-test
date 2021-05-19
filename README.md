@@ -10,6 +10,8 @@
 
 ### Branching strategies
 
+![GitFlow](assets/Screen%20Shot%202021-05-18%20at%209.51.04%20AM.png)
+
 Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 | Branch  | Description                    | Merge to |
