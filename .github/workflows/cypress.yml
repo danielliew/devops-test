@@ -10,6 +10,7 @@ on:
       - develop
 jobs:
   backend-cypress-run:
+    if: ${{ false }}
     runs-on: ubuntu-20.04
     defaults:
       run:
