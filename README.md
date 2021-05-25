@@ -6,8 +6,9 @@
 
 | Workflow Action | On                 | Branches         | Description                    |
 | --------------- | ------------------ | ---------------- | ------------------------------ |
-| nodejsCI        | ppush, pull reqush | `main` `develop` | run frontend and backend tests |
-| codeql-analysis | push, pull req     | `main` `develop` | default codeql tests           |
+| nodejsCI        | push, pull request | `main` `develop` | run frontend and backend tests |
+| codeql-analysis | push, pull req     | `main`           | default codeql tests           |
+| cypress-report  | push, pull req     | `main` `develop` | run cypress tests              |
 
 ### Branching strategies
 
