@@ -1,7 +1,15 @@
 name: With server
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
 jobs:
-  cypress-run:
+  backend-cypress-run:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -9,4 +17,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          spec: cypress/integration/backend/**
+          project: ./backend
           start: npm start
