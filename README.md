@@ -31,6 +31,8 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
 | frontend | react.js     | jest, @testing-library/react |
 | native   | react native | jest, react-test-renderer    |
 
+`cypress` - end to end testing framework
+
 ### Code scanning and code security
 
 ![github CodeQL](https://github.com/github/codeql)
