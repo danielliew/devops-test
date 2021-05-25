@@ -21,4 +21,5 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           spec: cypress/integration/backend/**
+          working-directory: ./backend
           start: npm start
