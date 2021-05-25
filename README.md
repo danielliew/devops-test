@@ -32,7 +32,7 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
 | frontend | react.js     | jest, @testing-library/react |
 | native   | react native | jest, react-test-renderer    |
 
-`cypress` - end to end testing framework
+`cypress` - the ultimate end to end, integration, unit testing framework
 
 ### Code scanning and code security
 
