@@ -5,12 +5,7 @@ name: Generate Cypress Report
 on:
   push:
     branches:
-      - main
-      - develop
-  pull_request:
-    branches:
-      - main
-      - develop
+      - "master"
 
 jobs:
   cypress-test:
@@ -19,22 +14,23 @@ jobs:
     defaults:
       run:
         working-directory: ./frontend
+    container: cypress/browsers:node12.18.0-chrome83-ff77
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          spec: cypress/integration/frontend/**
-          working-directory: ./frontend
-          start: npm start
+      - name: Install cypress and verify
+        run: |
+          npm ci
+          $(npm bin)/cypress verify
+      - name: Run Cypress tests
+        run: npm run test:chrome
+        continue-on-error: true
 
       - name: Copy test execution videos and screenshots
         run: |
-          mkdir public_html
-          cp -r cypress/videos public_html/videos
-          cp -r cypress/screenshots public_html/screenshots
+          mkdir public
+          cp -r cypress/videos public/videos
+          cp -r cypress/screenshots public/screenshots
       - name: Merge test reports
         run: npm run combine:report
 
@@ -45,4 +41,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public_html
+          publish_dir: ./public
