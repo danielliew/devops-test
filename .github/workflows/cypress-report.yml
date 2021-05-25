@@ -47,9 +47,9 @@ jobs:
 
       - name: Copy test execution videos and screenshots
         run: |
-          mkdir public
-          cp -r cypress/videos public/videos
-          cp -r cypress/screenshots public/screenshots
+          mkdir public_html
+          cp -r cypress/videos public_html/videos
+          cp -r cypress/screenshots public_html/screenshots
       - name: Merge test reports
         run: npm run combine:report
 
@@ -60,4 +60,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./public_html
