@@ -4,11 +4,13 @@
 
 [Github actions workflow](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths) descriptions
 
-| Workflow Action | On                 | Branches         | Description                    |
-| --------------- | ------------------ | ---------------- | ------------------------------ |
-| nodejsCI        | push, pull request | `main` `develop` | run frontend and backend tests |
-| codeql-analysis | push, pull req     | `main` `develop` | default codeql tests           |
-| cypress-report  | push, pull req     | `main` `develop` | run cypress tests              |
+| Workflow Action | On                 | Branches         | Description                         |
+| --------------- | ------------------ | ---------------- | ----------------------------------- |
+| nodejsCI        | push, pull request | `main` `develop` | run frontend and backend tests      |
+| codeql-analysis | push, pull req     | `main` `develop` | default codeql tests                |
+| cypress-report  | push, pull req     | `main` `develop` | run cypress tests                   |
+| cypress         | push, pull req     | `main` `develop` | run developer written cypress tests |
+| sonarcloud      | push, pull req     | `main` `develop` | run sonarcloud CI CS                |
 
 ### Branching strategies
 
@@ -41,6 +43,7 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
 ![github CodeQl for Javascript](https://codeql.github.com/docs/codeql-language-guides/codeql-for-javascript/)
 
 ![sonarqube github actions integration](https://docs.sonarqube.org/latest/analysis/github-integration/)
+![sonarcloud github actions integration](https://github.com/SonarSource/sonarcloud-github-action)
 
 ### Application performance manager (APM)
 
