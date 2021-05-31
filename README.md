@@ -57,3 +57,8 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
 - SolarWinds
 - Splunk
 - Cloudfare (application security)
+
+### CIAM
+
+- Azure b2c
+- Amazon
