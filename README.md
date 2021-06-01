@@ -38,20 +38,19 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
 
 ### Code scanning and code security
 
-![github CodeQL](https://github.com/github/codeql)
-![github CodeQL default action](https://github.com/github/codeql-action)
-![github CodeQl for Javascript](https://codeql.github.com/docs/codeql-language-guides/codeql-for-javascript/)
-
-![sonarqube github actions integration](https://docs.sonarqube.org/latest/analysis/github-integration/)
-![sonarcloud github actions integration](https://github.com/SonarSource/sonarcloud-github-action)
-![sonarsource CS db](https://rules.sonarsource.com/typescript/type/Security%20Hotspot/RSPEC-2068)
+- [github CodeQL](https://github.com/github/codeql)
+- [github CodeQL default action](https://github.com/github/codeql-action)
+- [github CodeQl for Javascript](https://codeql.github.com/docs/codeql-language-guides/codeql-for-javascript/)
+- [sonarqube github actions integration](https://docs.sonarqube.org/latest/analysis/github-integration/)
+- [sonarcloud github actions integration](https://github.com/SonarSource/sonarcloud-github-action)
+- [sonarsource CS db](https://rules.sonarsource.com/typescript/type/Security%20Hotspot/RSPEC-2068)
 
 ### Application performance manager (APM)
 
 - Elastic Cloud (ELK stack)
-  - ![ELK with express](https://www.elastic.co/guide/en/apm/agent/nodejs/current/express.html)
-  - ![ELK with react](https://www.elastic.co/guide/en/apm/agent/rum-js/master/react-integration.html)
-- Dynatrace -![Dynatrace with react](https://www.dynatrace.com/technologies/react-monitoring/) -![Dynatrace with express](https://www.dynatrace.com/support/help/technology-support/application-software/nodejs/)
+  - [ELK with express](https://www.elastic.co/guide/en/apm/agent/nodejs/current/express.html)
+  - [ELK with react](https://www.elastic.co/guide/en/apm/agent/rum-js/master/react-integration.html)
+- Dynatrace -[Dynatrace with react](https://www.dynatrace.com/technologies/react-monitoring/) -[Dynatrace with express](https://www.dynatrace.com/support/help/technology-support/application-software/nodejs/)
 
 ### Security information & event manager (SIEM)
 
