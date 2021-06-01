@@ -44,6 +44,7 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
 
 ![sonarqube github actions integration](https://docs.sonarqube.org/latest/analysis/github-integration/)
 ![sonarcloud github actions integration](https://github.com/SonarSource/sonarcloud-github-action)
+![sonarsource CS db](https://rules.sonarsource.com/typescript/type/Security%20Hotspot/RSPEC-2068)
 
 ### Application performance manager (APM)
 
