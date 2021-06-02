@@ -51,14 +51,21 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
   - [ELK with express](https://www.elastic.co/guide/en/apm/agent/nodejs/current/express.html)
   - [ELK with react](https://www.elastic.co/guide/en/apm/agent/rum-js/master/react-integration.html)
 - Dynatrace -[Dynatrace with react](https://www.dynatrace.com/technologies/react-monitoring/) -[Dynatrace with express](https://www.dynatrace.com/support/help/technology-support/application-software/nodejs/)
+- Splunk APM
+
+[Link](https://prd-p-uzn2b.splunkcloud.com) to splunk cloud
 
 ### Security information & event manager (SIEM)
 
-- SolarWinds
-- Splunk
+- Splunk SIEM
 - Cloudfare (application security)
 
 ### CIAM
 
 - Azure b2c
 - Amazon
+
+### Containerization
+
+- Docker
+- Kubernetes
