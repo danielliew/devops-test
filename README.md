@@ -3,15 +3,15 @@
 ### Table of Contents
 
 - [Workflows](#Workflows)
-- [Branching strategies](#Branching%20strategies)
-- [Testing packages](#Testing%20packages)
-- [Code scanning and code security](#Code%20scanning%20and%20code%20security)
-- [Application performance manager (APM)](<#Application%20performance%20manager%20(APM)>)
-- [Security information & event manager (SIEM)](<#Security%20information%20&%20event%20manager%20(SIEM)>)
+- [Branching strategies](#Branching-strategies)
+- [Testing packages](#Testing-packages)
+- [Code scanning and code security](#Code-scanning-and-code-security)
+- [Application performance manager (APM)](<#Application-performance-manager-(APM)>)
+- [Security information & event manager (SIEM)](<#Security-information-&-event-manager-(SIEM)>)
 - [CIAM](#CIAM)
 - [ITSM/ITOM](#ITSM/ITOM)
 - [Containerization](#Containerization)
-- [Pipeline strategy](#Pipeline%20strategy)
+- [Pipeline strategy](#Pipeline-strategy)
 
 ### Workflows
 
@@ -88,10 +88,11 @@ Based on [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/
 - [docker x cypress](https://www.mariedrake.com/post/using-docker-to-run-your-cypress-tests)
 - Kubernetes
 - [AKS tut](https://azure.microsoft.com/mediahandler/files/resourcefiles/kubernetes-learning-path/Kubernetes%20Learning%20Path%20version%201.0.pdf)
+- [Some notes on K8s](kubernetes.md)
 
 ### Pipeline strategy
 
-Pipline strategy describes the devops for [Code development](Code%20development) and [Pull requests](Pull%20requests)
+Pipline strategy describes the devops for [Code development](#Code-development) and [Pull requests](#Pull-requests)
 
 #### Code development
 
