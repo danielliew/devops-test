@@ -125,5 +125,5 @@ Pipline strategy describes the devops for [Code development](Code%20development)
 
 1. Assuming that the Code development process is complete
 2. Open a pull request to merge your branch into desired branch
-3. If `develop` or `main`, wait for reviewers to approve, ensure tests passed
+3. If `develop` or `main`, request and wait for reviewers to approve, ensure tests passed
 4. Pull request will be auto-merged
