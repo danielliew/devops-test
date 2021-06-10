@@ -1,0 +1,26 @@
+name: With server
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+jobs:
+  backend-cypress-run:
+    if: ${{ false }}
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          spec: cypress/integration/backend/**
+          working-directory: ./backend
+          start: npm start
