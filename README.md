@@ -12,6 +12,7 @@
 - [ITSM/ITOM](#ITSM/ITOM)
 - [Containerization](#Containerization)
 - [Pipeline strategy](#Pipeline-strategy)
+- [Devops Test - Overkill Todo App](#Overkill-todo-app)
 
 ### Workflows
 
@@ -128,3 +129,93 @@ Pipline strategy describes the devops for [Code development](#Code-development) 
 2. Open a pull request to merge your branch into desired branch
 3. If `develop` or `main`, request and wait for reviewers to approve, ensure tests passed
 4. Pull request will be auto-merged
+
+### Overkill Todo App
+
+Some documentation regarding the todo devops test app.
+
+| Repository                                                                    | Platform       | Service                       |
+| ----------------------------------------------------------------------------- | -------------- | ----------------------------- |
+| [web-main](https://github.com/danielliewytl/web-main)                         | `react`        | web frontend                  |
+| [todo-app-mobile-main](https://github.com/danielliewytl/todo-app-mobile-main) | `react-native` | mobile frontend               |
+| [todo-app-gql-backend](https://github.com/danielliewytl/todo-app-gql-backend) | `graphql`      | handle todos                  |
+| [todo-app-backend](https://github.com/danielliewytl/todo-app-backend)         | `express`      | handle todos                  |
+| [todo-app-socket-cr](https://github.com/danielliewytl/todo-app-socket-cr)     | `socket.io`    | realtime comments and replies |
+
+#### CI/CD plans
+
+Project to be served in a Kubernetes cluster on Azure Kubernetes Service (AKS). Each app should be containerized.
+
+Containerization: Docker
+
+APM/SIEM option: ELK Stack
+
+Code scanning/Code Vulnerability: sonarcloud, sonarLint
+
+ITSM/ITOM: ServiceNow
+
+Github Actions:
+
+- testing
+- docker
+- sonarcloud integration
+
+See more details below.
+
+#### `web-main`
+
+Typescript, react
+
+##### Features:
+
+- user auth Azure IAM (todo upon Azure access)
+- todos server via express (Kuala Lumpur) or graphql (Petaling Jaya)
+- todos comments and replies via socketio server
+- material-UI component library
+
+##### CI/CD:
+
+- cypress testing
+
+#### `todo-app-mobile-main`
+
+Typescript, react native
+
+#### `todo-app-gql-backend`
+
+Javascript, apollo server
+
+##### Features
+
+- Azure Mssql data source (todo upon Azure access)
+- graphql server
+  - introspection off upon production
+
+##### CI/CD
+
+- cypress testing
+
+#### `todo-app-backend`
+
+Typescript, express
+
+##### Features
+
+- Azure Mssql data source (todo upon Azure access)
+- express server
+
+##### CI/CD
+
+- cypress testing
+- Github Actions:
+  - generate cypress report
+  - docker build, push to Azure Registry
+  - sonarcloud scan
+
+#### `todo-app-socket-cr`
+
+Typescript, socketio
+
+- MongoDB document store
+- socketio server
+  - routing can be configurable
