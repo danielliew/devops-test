@@ -124,3 +124,13 @@
 - Volume can be mounted onto pods
 - K8s - PersistentVolume - AzureDisk/NFS/iSCSI
 - PersistentVolumeClaim - abstract between any storage system
+
+### Serverless K8s
+
+- serverless containers
+- virtual kubelet project (open source)
+- create virtual nodes ie. "nodeless"
+- route to container instance eg ACI
+- FaaS
+
+### Load Balancing and deployments
